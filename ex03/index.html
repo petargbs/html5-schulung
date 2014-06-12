@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GBS AG BLOG</title>
+	</head>
+
+<script>
+
+function doIt() {
+	console.log('bla');
+}	
+
+var doIt2 = function() {
+	console.log('doIt2');
+};
+
+var Person = function(name) {
+	this.__proto__.self = this;
+	this.name = name || 'Museter';
+	this.address = 'default';
+	this.show = function() {
+		console.log(this.name);
+	}
+};
+Person.prototype.Identifier = function () {
+	return 404;
+}
+
+var Customer = function() {
+	this.name = 'Customer';
+}
+Customer.prototype = new Person();
+
+var p1 = new Customer();
+p1.show();
+console.log(p1.Identifier());
+
+</script>
+<body>
+
+</body>
+</html>		

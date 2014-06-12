@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GBS AG BLOG</title>
+	</head>
+
+	<script>
+	document.addEventListener("DOMContentLoaded", function() {
+
+		var canvas = document.getElementById("cvs");
+		var ctx = canvas.getContext("2d");
+		ctx.fillStyle = '#000000';
+		ctx.fillRect(0, 0, 320, 240);
+		ctx.fillStyle = '#ff0000';
+		ctx.beginPath();
+		ctx.moveTo(50, 50);
+		ctx.lineTo(100, 100);
+		ctx.closePath();
+		ctx.stroke();
+
+	}, false);
+	</script>
+<body>
+
+<canvas id="cvs" width="320" height="240">
+</canvas>
+</body>
+</html>			
